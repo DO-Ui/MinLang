@@ -1,6 +1,6 @@
 # MinLang
 
-My esolang made in c++ inspired by c++ and python
+My esolang made in C++ inspired by C++ and Python
 
 Check out the wiki for documentation of the language
 

@@ -1,4 +1,9 @@
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <string>
+#include <map>
+#include <iostream>
+#include <fstream>
+
 using namespace std;
 
 map<string, int> ints;

@@ -361,6 +361,17 @@ int main(int argc, char** argv) {
 						current_char = i;
 					}
 				}
+				else if (ints.count(condition1) && ints.count(condition2)) {
+					if (ints.find(condition1)->second > ints.find(condition2)->second) {
+						current_char=i+1;
+					}
+					else {
+						while (code[i] != '\n') {
+							i++;
+						}
+						current_char = i;
+					}
+				}
 			}
 			else if (condition.find('<') != string::npos) {
 				int l = (int) condition.find('<');
@@ -403,6 +414,17 @@ int main(int argc, char** argv) {
 				else if (ints.count(condition2) && *c1 == 0) {
 					if (ints.find(condition2)->second < stoi(condition1)) {
 						current_char = i+1;
+					}
+					else {
+						while (code[i] != '\n') {
+							i++;
+						}
+						current_char = i;
+					}
+				}
+				else if (ints.count(condition1) && ints.count(condition2)) {
+					if (ints.find(condition1)->second < ints.find(condition2)->second) {
+						current_char=i+1;
 					}
 					else {
 						while (code[i] != '\n') {

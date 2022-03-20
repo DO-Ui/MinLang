@@ -316,7 +316,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1 == "true")
+				else if (condition1 == "true" && (condition2 == "true" || condition2 == "false"))
 				{
 					if (condition2 == condition1)
 						current_char = i + 1;
@@ -327,7 +327,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1 == "false")
+				else if (condition1 == "false" && (condition2 == "true" || condition2 == "false"))
 				{
 					if (condition2 == condition1)
 						current_char = i + 1;
@@ -338,7 +338,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1[0] == '"')
+				else if (condition1[0] == '"' && condition2[0] == '"')
 				{
 					if (condition2 == condition1)
 						current_char = i + 1;
@@ -456,7 +456,258 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it == stoi(condition2))
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it == ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it == *it1)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (string_arrs.count(arr))
+					{
+						// if second condition is string
+						list<string> a = string_arrs.find(arr)->second;
+						list<string>::iterator it = a.begin();
+						advance(it, real_index);
+						if (condition2[0] == '"')
+						{
+							condition2.erase(0, 1);
+							condition2.erase(condition2.size() - 1, 1);
+							if (*it == condition2)
+								current_char = i + 1;
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (bool_arrs.count(arr) && (condition2 == "true" || condition2 == "false"))
+					{
+						// if second condition is bool
+						list<bool> a = bool_arrs.find(arr)->second;
+						list<bool>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*it && condition2 == "true")
+							current_char = i + 1;
+						else if (!(*it) && condition2 == "false")
+							current_char = i + 1;
+						else
+						{
+							while (code[i] != '\n')
+								i++;
+							current_char = i;
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (*it == stoi(condition1))
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (*it == ints.find(condition1)->second)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it == *it1)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (string_arrs.count(arr))
+					{
+						// if first condition is string
+						list<string> a = string_arrs.find(arr)->second;
+						list<string>::iterator it = a.begin();
+						advance(it, real_index);
+						if (condition1[0] == '"')
+						{
+							condition1.erase(0, 1);
+							condition1.erase(condition1.size() - 1, 1);
+							if (*it == condition1)
+								current_char = i + 1;
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (bool_arrs.count(arr) && (condition1 == "true" || condition1 == "false"))
+					{
+						// if first condition is bool
+						list<bool> a = bool_arrs.find(arr)->second;
+						list<bool>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*it && condition1 == "true")
+							current_char = i + 1;
+						else if (!(*it) && condition1 == "false")
+							current_char = i + 1;
+						else
+						{
+							while (code[i] != '\n')
+								i++;
+							current_char = i;
+						}
+					}
+				}
 			}
+
 			else if (condition.find('>') != string::npos)
 			{
 				int l = (int)condition.find('>');
@@ -516,6 +767,184 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it > stoi(condition2))
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it > ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it > *it1)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (stoi(condition1) > *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (ints.find(condition1)->second > *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it1 > *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+			
 			}
 			else if (condition.find('<') != string::npos)
 			{
@@ -575,6 +1004,187 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+
+				// thing
+
+
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it < stoi(condition2))
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it < ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it < *it1)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (stoi(condition1) < *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (ints.find(condition1)->second < *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it1 < *it)
+							{
+								current_char = i + 1;
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+			
 			}
 		}
 		else if (command == '^')
@@ -618,7 +1228,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1 == "true")
+				else if (condition1 == "true" && (condition2 == "true" || condition2 == "false"))
 				{
 					if (condition2 == condition1)
 					{
@@ -632,7 +1242,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1 == "false")
+				else if (condition1 == "false" && (condition2 == "true" || condition2 == "false"))
 				{
 					if (condition2 == condition1)
 					{
@@ -646,7 +1256,7 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
-				else if (condition1[0] == '"')
+				else if (condition1[0] == '"' && condition2[0] == '"')
 				{
 					if (condition2 == condition1)
 					{
@@ -800,6 +1410,277 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+				// thing
+
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it == stoi(condition2))
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it == ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it == *it1)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (string_arrs.count(arr))
+					{
+						// if second condition is string
+						list<string> a = string_arrs.find(arr)->second;
+						list<string>::iterator it = a.begin();
+						advance(it, real_index);
+						if (condition2[0] == '"')
+						{
+							condition2.erase(0, 1);
+							condition2.erase(condition2.size() - 1, 1);
+							if (*it == condition2) {
+								current_char = i + 1;
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (bool_arrs.count(arr) && (condition2 == "true" || condition2 == "false"))
+					{
+						// if second condition is bool
+						list<bool> a = bool_arrs.find(arr)->second;
+						list<bool>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*it && condition2 == "true") {
+							current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+						}
+						else if (!(*it) && condition2 == "false") {
+							current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+						}
+						else
+						{
+							while (code[i] != '\n')
+								i++;
+							current_char = i;
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (*it == stoi(condition1))
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (*it == ints.find(condition1)->second)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it == *it1)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (string_arrs.count(arr))
+					{
+						// if first condition is string
+						list<string> a = string_arrs.find(arr)->second;
+						list<string>::iterator it = a.begin();
+						advance(it, real_index);
+						if (condition1[0] == '"')
+						{
+							condition1.erase(0, 1);
+							condition1.erase(condition1.size() - 1, 1);
+							if (*it == condition1) {
+								current_char = i + 1;
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+					else if (bool_arrs.count(arr) && (condition1 == "true" || condition1 == "false"))
+					{
+						// if first condition is bool
+						list<bool> a = bool_arrs.find(arr)->second;
+						list<bool>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*it && condition1 == "true") {
+							current_char = i + 1;
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+						}
+						else if (!(*it) && condition1 == "false") {
+							current_char = i + 1;
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+						}
+						else
+						{
+							while (code[i] != '\n')
+								i++;
+							current_char = i;
+						}
+					}
+				}
 			}
 			else if (condition.find('>') != string::npos)
 			{
@@ -858,6 +1739,204 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+				else if (ints.count(condition1) && ints.count(condition2))
+				{
+					if (ints.find(condition1)->second > ints.find(condition2)->second){
+						current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+					}
+					else
+					{
+						while (code[i] != '\n')
+							i++;
+						current_char = i;
+					}
+				}
+				// thing
+
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it > stoi(condition2))
+							{
+								current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it > ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it > *it1)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (stoi(condition1) > *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (ints.find(condition1)->second > *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it1 > *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+			
 			}
 			else if (condition.find('<') != string::npos)
 			{
@@ -916,6 +1995,205 @@ int main(int argc, char **argv)
 						current_char = i;
 					}
 				}
+				else if (ints.count(condition1) && ints.count(condition2))
+				{
+					if (ints.find(condition1)->second < ints.find(condition2)->second){
+						current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+					}
+					else
+					{
+						while (code[i] != '\n')
+							i++;
+						current_char = i;
+					}
+				}
+				// thing
+
+				else if (condition1.find('(') != string::npos)
+				{
+					int l = (int)condition1.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition1[k];
+
+					string index = "";
+					l++;
+					while (condition1[l] != ')')
+					{
+						index += condition1[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if second condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c2 == 0)
+						{
+							if (*it < stoi(condition2))
+							{
+								current_char = i + 1;
+						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition2))
+						{
+							if (*it < ints.find(condition2)->second)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition2.find('(') != string::npos)
+						{
+							int l1 = (int)condition2.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition2[k];
+
+							string index1 = "";
+							l1++;
+							while (condition2[l1] != ')')
+							{
+								index += condition2[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it < *it1)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+				else if (condition2.find('(') != string::npos)
+				{
+					int l = (int)condition2.find('(');
+					string arr = "";
+					for (int k = 0; k < l; k++)
+						arr += condition2[k];
+
+					string index = "";
+					l++;
+					while (condition2[l] != ')')
+					{
+						index += condition2[l];
+						l++;
+					}
+					int real_index;
+					if (ints.count(index))
+						real_index = ints.find(index)->second;
+					else
+						real_index = stoi(index);
+
+					if (int_arrs.count(arr))
+					{
+						// if first condition is int
+						list<int> a = int_arrs.find(arr)->second;
+						list<int>::iterator it = a.begin();
+						advance(it, real_index);
+						if (*c1 == 0)
+						{
+							if (stoi(condition1) < *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (ints.count(condition1))
+						{
+							if (ints.find(condition1)->second < *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+						else if (condition1.find('(') != string::npos)
+						{
+							int l1 = (int)condition1.find('(');
+							string arr1 = "";
+							for (int k = 0; k < l1; k++)
+								arr1 += condition1[k];
+
+							string index1 = "";
+							l1++;
+							while (condition1[l1] != ')')
+							{
+								index += condition1[l1];
+								l1++;
+							}
+							int real_index;
+							if (ints.count(index))
+								real_index = ints.find(index)->second;
+							else
+								real_index = stoi(index);
+
+							list<int> b = int_arrs.find(arr1)->second;
+							list<int>::iterator it1 = b.begin();
+							advance(it1, real_index);
+							if (*it1 < *it)
+							{
+								current_char = i + 1;
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							}
+							else
+							{
+								while (code[i] != '\n')
+									i++;
+								current_char = i;
+							}
+						}
+					}
+				}
+			
+				
 			}
 		}
 		else if (code[current_char] != ';' || code[current_char] != ' ' || code[current_char] != '}' || code[current_char] != ']' || code[current_char] != '\n')
@@ -1078,21 +2356,21 @@ int main(int argc, char **argv)
 						list<string> temp;
 						string elem = "";
 						bool in = false;
-						for (char c : value)
+						for (int z = 0; z <= value.size(); z++)
 						{
-							if (c == ',')
+							if (value[z] == ',' || z == value.size())
 							{
 								temp.push_back(elem);
 								elem = "";
 								continue;
 							}
-							if (c == '"')
+							if (value[z] == '"')
 							{
 								in = !in;
 								continue;
 							}
 							if (in)
-								elem += c;
+								elem += value[z];
 						}
 						string_arrs.insert({var, temp});
 					}
@@ -1342,21 +2620,21 @@ int main(int argc, char **argv)
 					list<string> a = string_arrs.find(var)->second;
 					string elem = "";
 					bool in = false;
-					for (char c : value)
+					for (int z = 0; z <= value.size(); z++)
 					{
-						if (c == ',')
+						if (value[z] == ',' || z == value.size())
 						{
 							a.push_back(elem);
 							elem = "";
 							continue;
 						}
-						if (c == '"')
+						if (value[z] == '"')
 						{
 							in = !in;
 							continue;
 						}
 						if (in)
-							elem += c;
+							elem += value[z];
 					}
 					string_arrs.erase(var);
 					string_arrs.insert({var, a});

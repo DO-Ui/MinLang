@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	string flag = argv[1];
 	if (flag == "--help" || flag == "-h" || argc < 2)
 	{
-		cout << "Minlang v1.1 ( https://github.com/DO-Ui/MinLang )\n";
+		cout << "Minlang v1.1.1 ( https://github.com/DO-Ui/MinLang )\n";
 		cout << "Usage: Minlang [file]\n";
 		cout << "-h / --help    Show this help message and exit\n";
 		cout << "-v / --version Show the current version of Minlang\n";
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 
 	if (flag == "-v" || flag == "--version")
 	{
-		cout << "Minlang version 1.1 ( https://github.com/DO-Ui/MinLang )\n";
+		cout << "Minlang version 1.1.1 ( https://github.com/DO-Ui/MinLang )\n";
 		return 0;
 	}
 
@@ -1223,7 +1223,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1237,7 +1237,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1251,7 +1251,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1265,7 +1265,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1279,7 +1279,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1293,7 +1293,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1309,7 +1309,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1325,7 +1325,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1344,7 +1344,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1363,7 +1363,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1377,7 +1377,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1391,7 +1391,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}
@@ -1405,7 +1405,7 @@ int main(int argc, char **argv)
 					}
 					else
 					{
-						while (code[i] != ';')
+						while (code[i] != '\n')
 							i++;
 						current_char = i;
 					}

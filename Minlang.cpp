@@ -314,13 +314,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -333,13 +337,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -352,13 +360,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -371,13 +383,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -390,13 +406,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -409,13 +429,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -430,13 +454,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -451,13 +479,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -472,13 +504,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -493,13 +529,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -512,13 +552,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -531,13 +575,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -550,13 +598,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -594,17 +646,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -615,17 +671,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -657,17 +717,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -685,17 +749,21 @@ int main(int argc, char **argv)
 								current_char = i + 1;
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -711,17 +779,21 @@ int main(int argc, char **argv)
 							current_char = i + 1;
 						else
 						{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
+							int counter = 1;
 							current_char++;
-						current_char--;
+							while (counter > 0)
+							{
+								if (code[i] == '{')
+								{
+									counter++;
+								}
+								else if (code[i] == '}')
+								{
+									counter--;
+								}
+								current_char++;
+							}
+							current_char--;
 						}
 					}
 				}
@@ -759,17 +831,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -780,17 +856,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -822,17 +902,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -850,17 +934,21 @@ int main(int argc, char **argv)
 								current_char = i + 1;
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -876,17 +964,21 @@ int main(int argc, char **argv)
 							current_char = i + 1;
 						else
 						{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
+							int counter = 1;
 							current_char++;
-						current_char--;
+							while (counter > 0)
+							{
+								if (code[i] == '{')
+								{
+									counter++;
+								}
+								else if (code[i] == '}')
+								{
+									counter--;
+								}
+								current_char++;
+							}
+							current_char--;
 						}
 					}
 				}
@@ -916,13 +1008,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -935,13 +1031,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -954,13 +1054,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -973,13 +1077,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1018,17 +1126,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -1039,17 +1151,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -1081,17 +1197,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -1130,17 +1250,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -1151,17 +1275,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -1193,22 +1321,25 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
 				}
-			
 			}
 			else if (condition.find('<') != string::npos)
 			{
@@ -1233,13 +1364,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1252,13 +1387,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1271,13 +1410,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1290,19 +1433,22 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
 
 				// thing
-
 
 				else if (condition1.find('(') != string::npos)
 				{
@@ -1338,17 +1484,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -1359,17 +1509,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -1401,17 +1555,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -1450,17 +1608,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -1471,17 +1633,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -1513,22 +1679,25 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
 				}
-			
 			}
 		}
 		else if (command == '^')
@@ -1570,13 +1739,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1592,13 +1765,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1614,13 +1791,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1636,13 +1817,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1658,13 +1843,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1680,13 +1869,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1704,13 +1897,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1728,13 +1925,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1755,13 +1956,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1782,13 +1987,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1804,13 +2013,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1826,13 +2039,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1848,13 +2065,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -1895,17 +2116,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -1917,17 +2142,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -1960,17 +2189,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -1984,23 +2217,28 @@ int main(int argc, char **argv)
 						{
 							condition2.erase(0, 1);
 							condition2.erase(condition2.size() - 1, 1);
-							if (*it == condition2) {
+							if (*it == condition2)
+							{
 								current_char = i + 1;
-							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -2010,27 +2248,33 @@ int main(int argc, char **argv)
 						list<bool> a = bool_arrs.find(arr)->second;
 						list<bool>::iterator it = a.begin();
 						advance(it, real_index);
-						if (*it && condition2 == "true") {
+						if (*it && condition2 == "true")
+						{
 							current_char = i + 1;
-						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 						}
-						else if (!(*it) && condition2 == "false") {
+						else if (!(*it) && condition2 == "false")
+						{
 							current_char = i + 1;
-						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 						}
 						else
 						{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
+							int counter = 1;
 							current_char++;
-						current_char--;
+							while (counter > 0)
+							{
+								if (code[i] == '{')
+								{
+									counter++;
+								}
+								else if (code[i] == '}')
+								{
+									counter--;
+								}
+								current_char++;
+							}
+							current_char--;
 						}
 					}
 				}
@@ -2069,17 +2313,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -2091,17 +2339,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -2134,17 +2386,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -2158,24 +2414,28 @@ int main(int argc, char **argv)
 						{
 							condition1.erase(0, 1);
 							condition1.erase(condition1.size() - 1, 1);
-							if (*it == condition1) {
+							if (*it == condition1)
+							{
 								current_char = i + 1;
-							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
-
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -2185,27 +2445,33 @@ int main(int argc, char **argv)
 						list<bool> a = bool_arrs.find(arr)->second;
 						list<bool>::iterator it = a.begin();
 						advance(it, real_index);
-						if (*it && condition1 == "true") {
+						if (*it && condition1 == "true")
+						{
 							current_char = i + 1;
 							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 						}
-						else if (!(*it) && condition1 == "false") {
+						else if (!(*it) && condition1 == "false")
+						{
 							current_char = i + 1;
 							code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 						}
 						else
 						{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
+							int counter = 1;
 							current_char++;
-						current_char--;
+							while (counter > 0)
+							{
+								if (code[i] == '{')
+								{
+									counter++;
+								}
+								else if (code[i] == '}')
+								{
+									counter--;
+								}
+								current_char++;
+							}
+							current_char--;
 						}
 					}
 				}
@@ -2237,13 +2503,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2259,13 +2529,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2281,19 +2555,24 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
 				else if (ints.count(condition1) && ints.count(condition2))
 				{
-					if (ints.find(condition1)->second > ints.find(condition2)->second){
+					if (ints.find(condition1)->second > ints.find(condition2)->second)
+					{
 						current_char = i + 1;
 						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 					}
@@ -2302,13 +2581,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2345,21 +2628,25 @@ int main(int argc, char **argv)
 							if (*it > stoi(condition2))
 							{
 								current_char = i + 1;
-						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -2371,17 +2658,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -2414,17 +2705,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -2464,17 +2759,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -2486,17 +2785,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -2529,22 +2832,25 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
 				}
-			
 			}
 			else if (condition.find('<') != string::npos)
 			{
@@ -2573,13 +2879,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2595,13 +2905,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2617,19 +2931,24 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
 				else if (ints.count(condition1) && ints.count(condition2))
 				{
-					if (ints.find(condition1)->second < ints.find(condition2)->second){
+					if (ints.find(condition1)->second < ints.find(condition2)->second)
+					{
 						current_char = i + 1;
 						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 					}
@@ -2638,13 +2957,17 @@ int main(int argc, char **argv)
 						int counter = 1;
 						current_char++;
 						while (counter > 0)
-							if (code[i] == '{') {
+						{
+							if (code[i] == '{')
+							{
 								counter++;
 							}
-							else if (code[i] == '}') {
+							else if (code[i] == '}')
+							{
 								counter--;
 							}
 							current_char++;
+						}
 						current_char--;
 					}
 				}
@@ -2681,21 +3004,25 @@ int main(int argc, char **argv)
 							if (*it < stoi(condition2))
 							{
 								current_char = i + 1;
-						code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
+								code.insert(loop_end, "\n" + code.substr(loop_start, (loop_end - loop_start)));
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition2))
@@ -2707,17 +3034,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition2.find('(') != string::npos)
@@ -2750,17 +3081,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
@@ -2800,17 +3135,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (ints.count(condition1))
@@ -2822,17 +3161,21 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 						else if (condition1.find('(') != string::npos)
@@ -2865,23 +3208,25 @@ int main(int argc, char **argv)
 							}
 							else
 							{
-						int counter = 1;
-						current_char++;
-						while (counter > 0)
-							if (code[i] == '{') {
-								counter++;
-							}
-							else if (code[i] == '}') {
-								counter--;
-							}
-							current_char++;
-						current_char--;
+								int counter = 1;
+								current_char++;
+								while (counter > 0)
+								{
+									if (code[i] == '{')
+									{
+										counter++;
+									}
+									else if (code[i] == '}')
+									{
+										counter--;
+									}
+									current_char++;
+								}
+								current_char--;
 							}
 						}
 					}
 				}
-			
-				
 			}
 		}
 		else if (code[current_char] != ';' || code[current_char] != ' ' || code[current_char] != '}' || code[current_char] != ']' || code[current_char] != '\n')

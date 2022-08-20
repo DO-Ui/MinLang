@@ -47,8 +47,13 @@ int if_skip(string code, int i, int current_char)
 
 int main(int argc, char **argv)
 {
-	string flag = argv[1];
-	if (flag == "--help" || flag == "-h" || argc < 2)
+	string flag;
+	if (argc < 2) {
+		flag = "-h";
+	} else {
+		flag = argv[1];
+	}
+	if (flag == "--help" || flag == "-h")
 	{
 		cout << "Minlang v1.1.2 ( https://github.com/DO-Ui/MinLang )\n";
 		cout << "Usage: Minlang [file]\n";
